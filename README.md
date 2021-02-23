@@ -28,16 +28,16 @@ docker-compose exec web bash
 php artisan key:generate
 ```
 
-6. Заходим в adminer: `http://127.0.0.1:6080` (то что указали в docker-compose.yml)
-Подключаемся к БД:
+6. Заходим в adminer: <http://127.0.0.1:6080> (то что указали в docker-compose.yml)
+7. Подключаемся к БД:
 ```
 login: root
 password: example_password
 ```
 
-7. Создаём БД `example_db_name` с режимом сопоставления *utf8mb4_unicode_ci*
+8. Создаём БД `example_db_name` с режимом сопоставления *utf8mb4_unicode_ci*
 
-8. Настраиваем Laravel, указываем хост базы - это имя нашего сервиса `db`:
+9. Настраиваем Laravel, указываем хост базы - это имя нашего сервиса `db`:
 ```
 DB_CONNECTION=mysql
 DB_HOST=db
@@ -47,13 +47,13 @@ DB_USERNAME=root
 DB_PASSWORD=example_password
 ```
 
-9. Возвращаемся в терминал контейнера, выполняем миграцию БД:
+10. Возвращаемся в терминал контейнера, выполняем миграцию БД:
 `php artisan migrate`
-
-
 
 Список команд:
 ```
 docker stop ID - остановить контейнер
 docker-compose up - поднять контейнеры
 ```
+
+[github] <https://github.com/austyuzhaninov/docker-laravel>
